@@ -1,0 +1,18 @@
+{
+  "name": "MerakiCRUD",
+  "version": "1.0.0",
+  "description": "a simple crud for cisco meraki products API ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Felipe Bruckmann, Melissa Patez",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  }
+}
