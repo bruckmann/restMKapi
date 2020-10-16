@@ -10,7 +10,7 @@ class NetworkController {
     } = req.body
   
     console.log(merakiApi.getNetwork(networkID, authKEY));
-    return res.json({networkID, authKEY});
+    return res.json(merakiApi.getNetwork(networkID, authKEY));
   }
 }
 

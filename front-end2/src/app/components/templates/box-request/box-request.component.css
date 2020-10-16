@@ -1,24 +1,79 @@
 .container {
   display: flex;
   margin: 200px auto;
-  max-width: 250px;
-  background-color: aqua;
+  max-width: 400px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 200ms ease-in;
+  animation-name: up;
+  animation-duration: 600ms;
+  animation-timing-function: ease-in-out;
 }
 
 .box {
   display: flex;
+  flex-direction: column;
   margin: auto;
-  padding: 40px;
+  padding: 30px;
 }
 
 form {
+  width: 100%;
+  margin: auto;
   font-family: 'Play', sans-serif;
+  margin-bottom: 20px;
 }
 
 form input {
   margin: 8px 0 8px 0 ;
+  font-weight: 700;
 }
 
 form label {
-  font-size: 14px;
+  text-transform: uppercase;
+  color:  #000;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+button { 
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  border: none;
+  background-color: #2bed5f;
+  transition: 300ms;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color:  #2bed7d;
+}
+
+.container:hover {
+  transform: translateY(-7px);
+  border: 2px solid #2bed7d
+}
+
+@keyframes up {
+  from {
+      opacity: 0;
+      transform: translateY(25px)
+  }
+  
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
 }

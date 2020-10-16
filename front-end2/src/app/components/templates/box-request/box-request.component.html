@@ -3,12 +3,13 @@
     <form>
       <label for="networkID">Seu NetworkID:</label>
       <br>
-      <input type="text" name="networkID" placeholder="NETWORK ID">
+      <input type="text" name="networkID"  [(ngModel)]="merakiReq.networkID">
       <br>
       <label for="authKEY">Sua chave de autenticação:</label>
       <br>
-      <input type="text" name="authKEY" placeholder="AUTHENTICATION KEY">
-      <button (click)="makeRequest()">Fazer request</button>
+      <input type="text" name="authKEY" [(ngModel)]="merakiReq.authKEY">
+      <br />
     </form>
+    <button (click)="makeRequest()">Fazer Request</button>
   </div>
 </div>

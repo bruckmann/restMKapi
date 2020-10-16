@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { MerakiReq } from '../../models/merakiReq.model'
-
+import { ApiRequestService } from '../../services/api-request.service';
+import { MerakiReq } from '../../models/merakiReq.model';
 
 
 @Component({
@@ -16,13 +16,16 @@ export class BoxRequestComponent implements OnInit {
     networkID: '',
     authKEY: ''
   };
+  
+  constructor(private apiRequestService: ApiRequestService) {};
 
-
-
-
-  constructor() { }
 
   ngOnInit(): void {
   }
 
+  makeRequest(): void {
+    this.apiRequestService.makeRequest(this.merakiReq).subscribe(() => {
+      this.apiRequestService.showAlert('Requisição feita com sucesso!');
+    });
+  }
 }
